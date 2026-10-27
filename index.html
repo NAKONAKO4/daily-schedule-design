@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Schedule Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-icon">A</div>
+          <div>
+            <p class="eyebrow">Planner</p>
+            <h1>Academic</h1>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="avatar">SJ</div>
+          <div>
+            <h2>Sarah Johnson</h2>
+            <p>Computer Science</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#" class="nav-item active">Overview</a>
+          <a href="#" class="nav-item">Weekly Plan</a>
+          <a href="#" class="nav-item">Assignments</a>
+          <a href="#" class="nav-item">Exams</a>
+        </nav>
+
+        <div class="mini-panel">
+          <p class="label">Semester</p>
+          <h3>Fall 2026</h3>
+        </div>
+
+        <div class="mini-panel focus-box">
+          <p class="label">Focus</p>
+          <h3>Data Structures</h3>
+          <span>Project deadline: Friday</span>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow muted">Student dashboard</p>
+            <h2>Weekly Schedule</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">This Week</button>
+            <button class="primary-btn">+ Add Course</button>
+          </div>
+        </header>
+
+        <section class="stats-row">
+          <div class="stat-card">
+            <span>Courses</span>
+            <strong>6</strong>
+          </div>
+          <div class="stat-card">
+            <span>Study Hours</span>
+            <strong>18h</strong>
+          </div>
+          <div class="stat-card">
+            <span>Assignments</span>
+            <strong>4</strong>
+          </div>
+          <div class="stat-card">
+            <span>GPA target</span>
+            <strong>3.9</strong>
+          </div>
+        </section>
+
+        <section class="schedule-card">
+          <div class="schedule-header">
+            <div>
+              <p class="eyebrow muted">Week 12</p>
+              <h3>Monday – Sunday</h3>
+            </div>
+            <div class="legend">
+              <span><i class="dot class-dot"></i> Class</span>
+              <span><i class="dot study-dot"></i> Study</span>
+              <span><i class="dot task-dot"></i> Task</span>
+            </div>
+          </div>
+
+          <div class="schedule-grid" id="scheduleGrid">
+            <div class="time-header">Time</div>
+            <div class="day-header">Mon</div>
+            <div class="day-header">Tue</div>
+            <div class="day-header">Wed</div>
+            <div class="day-header">Thu</div>
+            <div class="day-header">Fri</div>
+            <div class="day-header">Sat</div>
+            <div class="day-header">Sun</div>
+
+            <div class="time-slot">08:00</div>
+            <div class="cell empty"></div>
+            <div class="cell study">Review notes</div>
+            <div class="cell empty"></div>
+            <div class="cell study">Reading</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">09:00</div>
+            <div class="cell class">Calculus</div>
+            <div class="cell class">Physics Lab</div>
+            <div class="cell class">Calculus</div>
+            <div class="cell class">Algorithms</div>
+            <div class="cell class">Discrete Math</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">10:00</div>
+            <div class="cell class">Calculus</div>
+            <div class="cell class">Physics Lab</div>
+            <div class="cell class">Calculus</div>
+            <div class="cell class">Algorithms</div>
+            <div class="cell class">Discrete Math</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">11:00</div>
+            <div class="cell study">Assignment</div>
+            <div class="cell task">Lab report</div>
+            <div class="cell study">Problem set</div>
+            <div class="cell task">Project review</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">12:00</div>
+            <div class="cell empty"></div>
+            <div class="cell task">Lunch + recap</div>
+            <div class="cell empty"></div>
+            <div class="cell task">Lunch break</div>
+            <div class="cell empty"></div>
+            <div class="cell study">Self-study</div>
+            <div class="cell study">Plan week</div>
+
+            <div class="time-slot">13:00</div>
+            <div class="cell class">Literature</div>
+            <div class="cell class">Statistics</div>
+            <div class="cell class">History</div>
+            <div class="cell class">Operating Systems</div>
+            <div class="cell class">Web Design</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">14:00</div>
+            <div class="cell class">Literature</div>
+            <div class="cell class">Statistics</div>
+            <div class="cell class">History</div>
+            <div class="cell class">Operating Systems</div>
+            <div class="cell class">Web Design</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">15:00</div>
+            <div class="cell study">Study group</div>
+            <div class="cell task">Quiz prep</div>
+            <div class="cell study">Reading</div>
+            <div class="cell study">Practice</div>
+            <div class="cell task">Team meeting</div>
+            <div class="cell study">Revision</div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">16:00</div>
+            <div class="cell task">Essay draft</div>
+            <div class="cell empty"></div>
+            <div class="cell task">Homework</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+
+            <div class="time-slot">17:00</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+            <div class="cell study">Wrap-up</div>
+            <div class="cell empty"></div>
+            <div class="cell empty"></div>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Upcoming tasks</h3>
+              <button class="tiny-btn">View all</button>
+            </div>
+            <ul class="todo-list">
+              <li><span class="check"></span> Submit Data Structures project</li>
+              <li><span class="check"></span> Read chapter 6 for Literature</li>
+              <li><span class="check"></span> Review physics quiz notes</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Quick notes</h3>
+              <button class="tiny-btn">Add</button>
+            </div>
+            <div class="notes-box">
+              <p>Group study: Thursday at 4:00 PM</p>
+              <p>Office hours: Friday 11:30 AM</p>
+              <p>Finish lab report before weekend</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
